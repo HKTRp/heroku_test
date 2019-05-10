@@ -27,7 +27,12 @@ class BotHandler:
         if len(get_result) > 0:
             last_update = get_result[-1]
         else:
-            last_update = "None"
+            last_update = { 'update_id' : "None",
+                            'message' : "None",
+                            'text' : "None",
+                            'chat' : "None",
+                            'id' : "None",
+                            'first_name' : "None"}
 
         return last_update
     
@@ -46,8 +51,6 @@ def main():
 
         last_update = greet_bot.get_last_update()
 
-        if last_update == "None":
-            continue
 
         last_update_id = last_update['update_id']
         last_chat_text = last_update['message']['text']
