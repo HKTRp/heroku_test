@@ -27,12 +27,7 @@ class BotHandler:
         if len(get_result) > 0:
             last_update = get_result[-1]
         else:
-            last_update = { 'update_id' : 0,
-                            'message' : {'text' : "None",
-                                        'chat' : { 'id' : 0,
-                                                   'first_name' : "None"}
-                                         }
-                            }
+            last_update = None
 
         return last_update
     
@@ -68,8 +63,7 @@ def main():
         elif last_chat_text.lower() in greetings and today == now.day and 17 <= hour < 23:
             greet_bot.send_message(last_chat_id, 'Добрый вечер, {}'.format(last_chat_name))
             today += 1
-        if last_update_id != "None":
-            new_offset = last_update_id + 1
+        new_offset = last_update_id + 1
 
 if __name__ == '__main__':  
     try:
