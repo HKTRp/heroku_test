@@ -27,7 +27,7 @@ class BotHandler:
         if len(get_result) > 0:
             last_update = get_result[-1]
         else:
-            last_update = { 'update_id' : "None",
+            last_update = { 'update_id' : 0,
                             'message' : {'text' : "None",
                                         'chat' : { 'id' : 0,
                                                    'first_name' : "None"}
