@@ -28,11 +28,11 @@ class BotHandler:
             last_update = get_result[-1]
         else:
             last_update = { 'update_id' : "None",
-                            'message' : "None",
-                            'text' : "None",
-                            'chat' : "None",
-                            'id' : "None",
-                            'first_name' : "None"}
+                            'message' : {'text' : "None",
+                                        'chat' : { 'id' : "None",
+                                                   'first_name' : "None"}
+                                         }
+                            }
 
         return last_update
     
