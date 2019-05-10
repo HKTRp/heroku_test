@@ -1,1 +1,1 @@
-web: python StarturmBot.py -p $PORT
+worker: python main.py $PORT
