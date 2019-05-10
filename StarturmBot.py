@@ -54,6 +54,7 @@ def main():
             last_chat_name = last_update['message']['chat']['first_name']
 
             if last_chat_text == "/time":
+                new_offset = last_update_id + 1
                 greet_bot.send_message(last_chat_id, str(now.hour)+":"+str(now.minute))
 
 if __name__ == '__main__':  
