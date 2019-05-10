@@ -29,7 +29,7 @@ class BotHandler:
         else:
             last_update = { 'update_id' : "None",
                             'message' : {'text' : "None",
-                                        'chat' : { 'id' : "None",
+                                        'chat' : { 'id' : 0,
                                                    'first_name' : "None"}
                                          }
                             }
