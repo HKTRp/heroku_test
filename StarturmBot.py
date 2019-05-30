@@ -48,6 +48,9 @@ def main():
             try:
                 last_chat_img = last_update['message']['image']
                 last_chat_text = last_update['message']['text']
+            except KeyError:
+                last_chat_img = None
+                last_chat_text = None
             last_chat_id = last_update['message']['chat']['id']
             last_chat_name = last_update['message']['chat']['first_name']
 
