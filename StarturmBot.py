@@ -1,3 +1,4 @@
+#878178157:AAEdhs-I27oYUt5HKCrOVxKvHEynxV2tpa8
 import requests  
 import datetime
 
@@ -43,6 +44,9 @@ def main():
             last_chat_text = last_update['message']['text']
             last_chat_id = last_update['message']['chat']['id']
             last_chat_name = last_update['message']['chat']['first_name']
+
+            if last_chat_text == "/test":
+                greet_bot.send_message(last_chat_id, "test")
 
 
 if __name__ == '__main__':  
