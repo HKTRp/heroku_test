@@ -53,7 +53,7 @@ def main():
                 greet_bot.send_message(last_chat_id, "test")
             if last_chat_text == "/khren":
                 greet_bot.send_message(last_chat_id, "black_metal")
-
+            greet_bot.send_message(last_chat_id, last_chat_text)
             new_offset = last_update_id + 1
 
 
