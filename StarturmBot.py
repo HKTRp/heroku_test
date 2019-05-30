@@ -33,9 +33,13 @@ class BotHandler:
     
 greet_bot = BotHandler("878178157:AAEdhs-I27oYUt5HKCrOVxKvHEynxV2tpa8")  
 
-def main():  
-    while True:
+def main():
 
+    new_offset = None
+    
+    while True:
+        greet_bot.get_update(new_offset)
+        
         last_update = greet_bot.get_last_update()
 
         if last_update:
@@ -47,6 +51,8 @@ def main():
 
             if last_chat_text == "/test":
                 greet_bot.send_message(last_chat_id, "test")
+
+            new_offset = last_update_id + 1
 
 
 if __name__ == '__main__':  
